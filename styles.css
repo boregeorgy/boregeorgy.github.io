@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Disables horizontal scrolling */
-    background-color: #f0f2f5; /* Sets the background color of the entire page white */
+    background-color: #f0f2f5; /* Sets the background color of the entire page */
     text-align: center; /* Centers content in the body */
 }
 
@@ -10,9 +10,12 @@ html, body {
     position: fixed; /* Keeps the image at the top and not moving on scroll */
     top: 0;
     left: 0;
+    right: 0; /* Ensures the image spans from left to right */
     z-index: 1000;
     width: 100%; /* Sets the image width to cover the full width of the viewport */
     height: auto; /* Scales the height automatically based on the width */
+    object-fit: cover; /* Covers the space without distorting aspect ratio */
+    max-height: 100vh; /* Maximum height is 100% of the viewport height */
 }
 
 .main-image {
@@ -22,60 +25,38 @@ html, body {
     margin: 0 auto; /* Center images horizontally with no vertical margins */
 }
 
-/* Mobile device styles */
 @media (max-width: 600px) {
     .main-image {
         content: url('basebookmobile.png'); /* Change to mobile image on small screens */
     }
 }
 
-.sub-image {
-    max-width: 50%; /* Set the maximum width of the sub-images to 50% */
+.sub-image, .disclaimer-image, .button-image {
+    max-width: 100%; /* Limit maximum width to 100% of the container */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures images are treated as block-level elements */
-    margin: 0 auto 15px; /* Center sub-images horizontally with 15px margin at the bottom */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0 auto 15px; /* Center images horizontally with a bottom margin */
 }
 
 .button-container {
-    display: flex; /* Use flexbox for the button container */
-    justify-content: center; /* Center the buttons horizontally */
-    margin: 25px auto 50px; /* Add margin to top, auto on the sides, and 50px at the bottom */
+    display: flex;
+    justify-content: center;
+    margin: 25px auto 50px;
 }
 
 .button-container a {
-    display: inline-block; /* Ensure the link takes only the necessary space */
-    margin: 10px; /* Add margin around the links */
-}
-
-.button-image {
-    width: 75%; /* Set the width of the button images to 75% of their original size */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align the images vertically */
+    display: inline-block;
+    margin: 10px;
 }
 
 .disclaimer-space {
-    height: 50px; /* Reduced the height for better spacing distribution */
+    height: 50px;
 }
 
-.disclaimer-image {
-    max-width: 100%; /* Ensure the disclaimer image is fully responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures image is treated as block-level element */
-    margin: 20px auto; /* Center disclaimer image horizontally with 20px margin at the top and bottom */
-}
-
-.custom-link {
-    text-decoration: none; /* Removes the underline from all custom links */
-    font-size: 1.0em; /* Sets a base font size for all custom links */
-}
-
-.renounced-link {
-    color: #1877f2; /* Sets a blue color for the Renounced Txn link */
-}
-
-.burnt-link {
-    color: #1877f2; /* Sets a red color for the Burnt Txn link */
+.custom-link, .renounced-link, .burnt-link {
+    text-decoration: none;
+    font-size: 1.0em;
+    color: #1877f2; /* Set a consistent color and modify as needed */
 }
 
 .custom-text {
@@ -83,6 +64,5 @@ html, body {
     color: #1877f2;
     margin: 50px auto;
     font-size: 2.0em;
-    text-align: center; /* Ensures all text in the paragraph is centered */
+    text-align: center;
 }
-
