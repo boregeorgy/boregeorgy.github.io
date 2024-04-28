@@ -5,7 +5,6 @@ html, body {
     background-color: #f0f2f5; /* Sets the background color of the entire page white */
     text-align: center; /* Centers content in the body */
 }
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 .header-image {
     position: fixed; /* Keeps the image at the top and not moving on scroll */
@@ -26,9 +25,7 @@ html, body {
 /* Mobile device styles */
 @media (max-width: 600px) {
     .main-image {
-        content: url('basebookmobile(3).png'); /* Change to mobile image on small screens */
-           width: 150%;
-        height: auto;
+        content: url('basebookmobile.png'); /* Change to mobile image on small screens */
     }
 }
 
@@ -58,11 +55,11 @@ html, body {
 }
 
 .disclaimer-space {
-    height: 75px; /* Reduced the height for better spacing distribution */
+    height: 50px; /* Reduced the height for better spacing distribution */
 }
 
 .disclaimer-image {
-    max-width: 90%; /* Ensure the disclaimer image is fully responsive */
+    max-width: 100%; /* Ensure the disclaimer image is fully responsive */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures image is treated as block-level element */
     margin: 20px auto; /* Center disclaimer image horizontally with 20px margin at the top and bottom */
@@ -88,6 +85,4 @@ html, body {
     font-size: 2.0em;
     text-align: center; /* Ensures all text in the paragraph is centered */
 }
-
-
 
