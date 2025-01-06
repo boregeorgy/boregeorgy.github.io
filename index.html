@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President Pump</title>
+    <link rel="icon" href="pump.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            color: white; /* Ensures text visibility on flag background */
+        }
+        #gift {
+            width: 500px;
+            height: 500px;
+            background: url('pump.png') no-repeat center center;
+            background-size: contain;
+            margin: 0 auto;
+            cursor: pointer;
+            animation: shake 1s infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        .socials {
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .socials a {
+            text-decoration: none;
+        }
+        .socials img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="gift" onclick="openGift()"></div>
+        <div class="socials">
+            <a href="https://dexscreener.com" target="_blank">
+                <img src="dexscreener.png" alt="Dexscreener">
+            </a>
+            <a href="https://telegram.org" target="_blank">
+                <img src="telegram.png" alt="Telegram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="twitter.png" alt="Twitter">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function openGift() {
+            window.location.href = "https://telegram.org";
+        }
+    </script>
+</body>
+</html>
