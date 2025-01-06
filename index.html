@@ -3,37 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>President Pump</title>
-    <link rel="icon" href="pump.png" type="image/png">
+    <title>Heavy Base</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg') no-repeat center center;
-            background-size: cover;
+            background: radial-gradient(circle, #ff007f, #7f00ff, #00ffff);
+            background-size: 200% 200%;
+            animation: partyLights 3s infinite;
             text-align: center;
-            color: white; /* Ensures text visibility on flag background */
+            color: white; /* Ensures text visibility on the party background */
+        }
+        @keyframes partyLights {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 6rem;
+            margin: 0;
+            padding: 0px;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #7f00ff, 0 0 30px #00ffff;
         }
         #gift {
             width: 500px;
             height: 500px;
-            background: url('pump.png') no-repeat center center;
+            background: url('siteimage.png') no-repeat center center;
             background-size: contain;
-            margin: 0 auto;
             cursor: pointer;
-            animation: shake 1s infinite;
+            animation: pulse 0.5s infinite;
+            margin-bottom: -50px;
+            margin-top: -50px;
         }
-        @keyframes shake {
-            0%, 100% { transform: rotate(0); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
         .socials {
-            margin-top: 30px;
+            margin-top: -20px;
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
             border-radius: 10px;
@@ -52,16 +67,17 @@
     </style>
 </head>
 <body>
+    <h1>HEAVY BASE</h1>
     <div id="content">
         <div id="gift" onclick="openGift()"></div>
         <div class="socials">
-            <a href="https://pump.fun/coin/Eejyyua73ULKQKQHA5TqmybmvUaVua66HCQsL3Fpump" target="_blank">
-                <img src="pumpfun.png" alt="PumpFun">
+            <a href="https://dexscreener.com" target="_blank">
+                <img src="dexscreener.png" alt="Dexscreener">
             </a>
-            <a href="https://t.me/WhitehousePump" target="_blank">
+            <a href="https://telegram.org" target="_blank">
                 <img src="telegram.png" alt="Telegram">
             </a>
-            <a href="https://x.com/presidentpumpe" target="_blank">
+            <a href="https://twitter.com" target="_blank">
                 <img src="twitter.png" alt="Twitter">
             </a>
         </div>
@@ -69,7 +85,7 @@
 
     <script>
         function openGift() {
-            window.location.href = "https://t.me/presidentpump1";
+            window.location.href = "https://telegram.org";
         }
     </script>
 </body>
