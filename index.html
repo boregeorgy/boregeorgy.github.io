@@ -20,6 +20,10 @@
             animation: partyLights 3s infinite;
             text-align: center;
             color: white; /* Ensures text visibility on the party background */
+            overflow-x: hidden; /* Disable horizontal scrolling */
+        }
+        html {
+            overflow-x: hidden; /* Disable horizontal scrolling */
         }
         @keyframes partyLights {
             0% { background-position: 0% 50%; }
@@ -32,6 +36,11 @@
             margin: 0;
             padding: 20px;
             text-shadow: 0 0 10px #ff007f, 0 0 20px #7f00ff, 0 0 30px #00ffff;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4rem; /* Reduce size of title on smaller screens */
+            }
         }
         #gift {
             width: 500px;
@@ -90,3 +99,4 @@
     </script>
 </body>
 </html>
+
